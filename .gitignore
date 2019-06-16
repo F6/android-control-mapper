@@ -1,2 +1,4 @@
 *.pyc
 .vscode
+.DS_Store
+androidcontrollmapper/_DEVICE_ID.py

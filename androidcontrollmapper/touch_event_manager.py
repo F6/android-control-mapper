@@ -57,7 +57,7 @@ class TouchEventManager():
             pass
         else:
             self.command_builder.commit()
-            logger.debug( self.command_builder._content )
+            # logger.debug( self.command_builder._content )
             self.command_builder.publish(self.device.connection)
 
         # refresh the command_builder
