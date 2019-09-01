@@ -2,3 +2,4 @@
 .vscode
 .DS_Store
 androidcontrollmapper/_DEVICE_ID.py
+androidcontrollmapper/record.txt
