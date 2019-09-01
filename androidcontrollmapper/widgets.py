@@ -58,7 +58,7 @@ class Button(GameWidget):
         self.activated = True
 
     def deactivate(self):
-        if self.activate == False:
+        if self.activated == False:
             return
         # print('up', self)
         # SAFE GUARD
@@ -102,7 +102,7 @@ class Joystick(GameWidget):
         self.activated = True
 
     def deactivate(self):
-        if self.activate == False:
+        if self.activated == False:
             return
         # SAFE GUARD: empty commit before up
         self.touch_event_manager.command_builder.commit()
@@ -195,7 +195,7 @@ class FPSMouse(GameWidget):
         self.activated = True
 
     def deactivate(self):
-        if self.activate == False:
+        if self.activated == False:
             return
         # SAFE GUARD: empty commit before up
         self.touch_event_manager.command_builder.commit()

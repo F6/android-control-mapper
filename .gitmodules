@@ -1,0 +1,3 @@
+[submodule "androidcontrollmapper/android-touch-record-replay"]
+	path = androidcontrollmapper/android-touch-record-replay
+	url = https://github.com/Cartucho/android-touch-record-replay
