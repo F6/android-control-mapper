@@ -25,4 +25,7 @@ def replay_input(input_device='/dev/input/event5', record_filename='record.txt')
     for command in command_list:
         subprocess.run(command, shell=True)
 
-replay_input()
+repeat_times = 18
+for i in range(repeat_times):
+    print(i)
+    replay_input()

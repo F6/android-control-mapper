@@ -36,8 +36,8 @@ p_OF_F4 = {'time':138}
 p_OF_8 = {'time':180}
 
 # Running settings
-repeat_times = 6
-profile = p_OF_F4
+repeat_times = 3
+profile = p_OF_8
 
 # -------- Main Program Loop -----------
 
