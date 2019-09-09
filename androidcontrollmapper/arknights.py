@@ -36,10 +36,22 @@ p_OF_F4 = {'time':138}
 p_OF_8 = {'time':180}
 
 # Running settings
-repeat_times = 3
-profile = p_OF_8
+repeat_times = int(490/20)
+profile = p_OF_F4
+
+# repeat_times = 6
+# profile = p_OF_8
+
 
 # -------- Main Program Loop -----------
+
+logger.info("Started")
+logger.info("Expect to repeat {} times".format(repeat_times))
+
+total_time_cost = repeat_times * (profile['time'] + 16)
+logger.info("Expect to cost {s} seconds in total, that is around {h} hours".format(s=total_time_cost, h=total_time_cost/3600))
+
+logger.disable("pyminitouch")
 
 try:
     # repeat times
@@ -70,9 +82,9 @@ try:
         logger.info("Waiting for operation finish")
         logger.info("The stage is expected to finish in {} seconds".format(profile['time']))
         for j in range(profile['time']):
+            if j % 10 == 0:
+                logger.info("Waited for {j}.0 seconds".format(j=j))
             time.sleep(1.0)
-            if j // 10 == 0:
-                logger.info("Waited for {j}.0 seconds".format(j=j+1))
         logger.info("Waited for a total of {} seconds".format(profile['time']))
 
         # touch anywhere to return to level selection
